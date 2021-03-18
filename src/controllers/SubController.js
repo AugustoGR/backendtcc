@@ -90,7 +90,7 @@ module.exports = {
 
     async create(request, response){
         const {prof,turma, horario, horariofim, profsub, mat, matSub, data, email, obs, emailSub, jwt} = request.body;
-        valida(jwt);
+        //valida(jwt);
         var status = 'Requerido';
         const domain = email.split('@');
         if(domain[1]==="campus.ifrs.edu.br"||domain[1]==="canoas.ifrs.edu.br"){
@@ -126,9 +126,8 @@ module.exports = {
         }else{return response.json({id:'error'})}
     },
     async index(request, response){
-        //const result = await connection('substituicoes').select('*');
-        //return response.json(result);
-        return response.json("hellow?");
+        const result = await connection('substituicoes').select('*');
+        return response.json(result);
     },
     async getOne(request, response){
         const {id} = request.params;
