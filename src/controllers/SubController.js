@@ -120,11 +120,10 @@ module.exports = {
                 email: email.stripHTML(),
                 emailsub: emailSub.stripHTML(),
                 obs: obsfi
-            }).returning('id').then(id =>{idf=id});
-            console.log(idf);
-            //var type = 'create';
-            //await mail(prof.stripHTML(),turma.stripHTML(), horario.stripHTML(),horariofim.stripHTML(), profsub.stripHTML(), mat.stripHTML(), stripmat, data, id, emailSub.stripHTML(), type);
-            return response.json('ok');
+            }).returning('id').then(id =>{idf=[id]});
+            var type = 'create';
+            await mail(prof.stripHTML(),turma.stripHTML(), horario.stripHTML(),horariofim.stripHTML(), profsub.stripHTML(), mat.stripHTML(), stripmat, data, idf, emailSub.stripHTML(), type);
+            return response.json(idf);
         }else{return response.json({id:'error'})}
     },
     async index(request, response){
