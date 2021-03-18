@@ -51,6 +51,9 @@ module.exports = {
       port: '5432',
       ssl: true
     },
+    ssl: {
+      rejectUnauthorized: false
+    },
     migrations: {
       directory: './src/database/migrations'
     }
