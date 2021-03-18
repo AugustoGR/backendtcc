@@ -106,7 +106,7 @@ module.exports = {
             else{
                 var obsfi = obs;
             }
-            const idf = null;
+            var idf = null;
             await connection('substituicoes').insert({
                 turma: turma.stripHTML(),
                 horario: horario.stripHTML(),
