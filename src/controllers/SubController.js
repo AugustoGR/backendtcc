@@ -106,7 +106,8 @@ module.exports = {
             else{
                 var obsfi = obs;
             }
-            const id = await connection('substituicoes').insert({
+            const idf = null;
+            await connection('substituicoes').insert({
                 turma: turma.stripHTML(),
                 horario: horario.stripHTML(),
                 horariofim: horariofim.stripHTML(),
@@ -119,8 +120,8 @@ module.exports = {
                 email: email.stripHTML(),
                 emailsub: emailSub.stripHTML(),
                 obs: obsfi
-            });
-            console.log(id);
+            }).returning('id').then(id =>{idf=id});
+            console.log(idf);
             //var type = 'create';
             //await mail(prof.stripHTML(),turma.stripHTML(), horario.stripHTML(),horariofim.stripHTML(), profsub.stripHTML(), mat.stripHTML(), stripmat, data, id, emailSub.stripHTML(), type);
             return response.json('ok');
