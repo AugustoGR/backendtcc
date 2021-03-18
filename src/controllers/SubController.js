@@ -120,7 +120,7 @@ module.exports = {
                 email: email.stripHTML(),
                 emailsub: emailSub.stripHTML(),
                 obs: obsfi
-            }).returning('id').then(id =>{idf=[id]});
+            }).returning('id').then(id =>{[idf]=id});
             var type = 'create';
             await mail(prof.stripHTML(),turma.stripHTML(), horario.stripHTML(),horariofim.stripHTML(), profsub.stripHTML(), mat.stripHTML(), stripmat, data, idf, emailSub.stripHTML(), type);
             return response.json(idf);
