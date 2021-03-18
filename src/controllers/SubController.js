@@ -128,7 +128,7 @@ module.exports = {
     async index(request, response){
         //const result = await connection('substituicoes').select('*');
         //return response.json(result);
-        return response.json("hellow");
+        return response.json("hellow?");
     },
     async getOne(request, response){
         const {id} = request.params;
