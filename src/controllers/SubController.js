@@ -120,8 +120,8 @@ module.exports = {
                 emailsub: emailSub.stripHTML(),
                 obs: obsfi
             });
-            //var type = 'create';
-            //await mail(prof.stripHTML(),turma.stripHTML(), horario.stripHTML(),horariofim.stripHTML(), profsub.stripHTML(), mat.stripHTML(), stripmat, data, id, emailSub.stripHTML(), type);
+            var type = 'create';
+            await mail(prof.stripHTML(),turma.stripHTML(), horario.stripHTML(),horariofim.stripHTML(), profsub.stripHTML(), mat.stripHTML(), stripmat, data, id, emailSub.stripHTML(), type);
             return response.json('ok');
         }else{return response.json({id:'error'})}
     },
