@@ -16,6 +16,6 @@ const sslServer = https.createServer(
 
 },app)
 //sslServer.listen(3443);
-app.listen(3443||process.env.PORT);
+app.listen(process.env.PORT);
 
 
