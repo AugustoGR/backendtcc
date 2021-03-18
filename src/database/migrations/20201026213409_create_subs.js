@@ -12,6 +12,8 @@ exports.up = function(knex) {
       table.string('mat');
       table.string('matsub');
       table.string('turma');
+      table.string('obs');
+      table.string('emailsub');
   })
 };
 

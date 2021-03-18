@@ -43,10 +43,15 @@ module.exports = {
 
   production:  {
     client:'pg',
-    connection: process.env.DATABASE_URL,
+    connection: {
+      host:'ec2-52-71-161-140.compute-1.amazonaws.com',
+      database:'d67focrh9lsj0f',
+      user:'xpgqhrjnoerxnw',
+      password: '5432'
+    },
     migrations: {
       directory: './src/database/migrations'
     }
-  }
+  },
 
 };
