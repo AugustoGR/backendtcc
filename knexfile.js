@@ -48,8 +48,7 @@ module.exports = {
       database: 'd67focrh9lsj0f',
       user:     'xpgqhrjnoerxnw',
       password: 'passa0d51079126e32204ef339eca1fc46f95774dcd465a6476831bf1209c2df9509ord',
-      port: '5432',
-      ssl: true
+      port: '5432'
     },
     ssl: {
       rejectUnauthorized: false
