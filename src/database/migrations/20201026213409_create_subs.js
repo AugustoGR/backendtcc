@@ -14,6 +14,7 @@ exports.up = function(knex) {
       table.string('turma');
       table.string('obs');
       table.string('emailsub');
+      table.integer('confirmacao');
   })
 };
 
