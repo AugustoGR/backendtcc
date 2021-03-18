@@ -7,6 +7,6 @@ routes.post('/sessions', sessionController.create);
 routes.post('/substituicoes', subController.create);
 routes.get('/substituicoes', subController.index);
 routes.get('/substituicoes/:id', subController.getOne);
-routes.get('/confirmacao/:id', subController.update);
+routes.post('/confirmacao/:id', subController.update);
 routes.post('/cancela/:id', subController.updateStatus);
 module.exports = routes;
