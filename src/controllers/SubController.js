@@ -79,7 +79,7 @@ const { default: parseJwk } = require('jose/jwk/parse')
         var d =data.getDate().toString();
         var m =(data.getMonth()+1).toString();
         var dia = (d.length === 1) ? '0'+d:d;
-        if(type==='create'){dia++}
+        //if(type==='create'){dia++}
         var mes = (m.length === 1) ? '0'+m:m;
         return(dia+'/'+mes+'/'+data.getFullYear());
     }
