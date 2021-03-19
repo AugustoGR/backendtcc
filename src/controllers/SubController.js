@@ -36,7 +36,7 @@ const { default: parseJwk } = require('jose/jwk/parse')
         var title;
         if(type === 'create'){
             title = 'Substituição agendada';
-            var button = "<br><br><a href='https://ssapifrs.herokuapp.com/confirmacao?id="+id+"'>Estou ciente</a>"
+            var button = "<br><br><a href='https://ssapifrscanoas.herokuapp.com/confirmacao?id="+id+"'>Estou ciente</a>"
         }
         else{
             title = 'Substituição cancelada'
