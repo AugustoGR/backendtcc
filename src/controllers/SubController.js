@@ -90,7 +90,7 @@ module.exports = {
 
     async create(request, response){
         const {prof,turma, horario, horariofim, profsub, mat, matSub, data, email, obs, emailSub, jwt} = request.body;
-        //valida(jwt);
+        valida(jwt);
         var status = 'Requerido';
         const domain = email.split('@');
         if(domain[1]==="campus.ifrs.edu.br"||domain[1]==="canoas.ifrs.edu.br"){
