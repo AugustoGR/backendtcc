@@ -140,7 +140,7 @@ module.exports = {
         const [resultconf] = await connection('substituicoes').where('id',id).select('confirmacao','status');
         let conf = resultconf.confirmacao + 1;
         var newsta = "Requerido";
-        if(conf >= 3){
+        if(conf >= 2){
             newsta = "Agendado";
         }
         const result = await connection('substituicoes').where('id',id).update({
