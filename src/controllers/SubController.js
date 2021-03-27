@@ -127,7 +127,7 @@ module.exports = {
         }else{return response.json({id:'error'})}
     },
     async index(request, response){
-        const result = await connection('substituicoes').select('*');
+        const result = await connection('substituicoes').select('*').orderBy('id');
         return response.json(result);
     },
     async getOne(request, response){
